@@ -1,0 +1,221 @@
+.navbar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 78px;
+    background: var(--bgg-color);
+    padding: 6px 14px;
+    z-index: 99;
+    transition: all 0.5s ease;
+    .logo{
+        cursor: pointer;
+    }
+    .logoDetails{
+        height: 60px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        .icon{
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+        .logoName{
+            color: var(--line-color);
+            font-size: 16px;
+            font-weight: 600;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+        .btn{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            font-size: 22px;
+            transition: all 0.4s ease;
+            text-align: center;
+            opacity: 1;
+            //cursor: pointer;
+        }
+        .btnClose{
+            
+            opacity: 0;
+        }
+    }
+    svg{
+        color: var(--line-color);
+        height: 30px;
+        min-width: 50px;
+        font-size: 28px;
+        text-align: center;
+        line-height: 60px;
+    }
+    input{
+        font-size: 15px;
+        color: var(--line-color);
+        font-weight: 400;
+        outline: none;
+        height: 50px;
+        width: 100%;
+        border: none;
+        border-radius: 12px;
+        // transition: all 0.5s ease;
+        background: var(--char-color);
+        pointer-events: none;
+        opacity: 0;
+        
+    }
+    .search{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        font-size: 22px;
+        background: var(--bgg-color);
+        color: var(--line-color);
+        &:hover{
+            background: var(--line-color);
+            color: var(--char-color);
+
+        }
+    }
+    li:first-child{
+        background: var(--bgg-hover-color);
+        svg{
+            background: var(--bgg-hover-color);
+        }
+    }
+    li{
+        background: var(--bgg-color);
+        height: 50px;
+        border-radius: 12px;
+        cursor: pointer;
+        &:hover{
+            background: var(--line-color);
+            .search, input{
+                background: var(--line-color);
+                color: var(--char-color);
+            }
+            
+        }
+        input{
+            background: var(--bgg-color);
+            &:hover{
+                background: var(--line-color);
+                color: var(--char-color);
+            }
+        }
+        a{
+            display: flex;
+            height: 100%;
+            width: 100%;
+            border-radius: 12px;
+            align-items: center;
+            text-decoration: none;
+            transition:  all 0.4s ease;
+            // background: var(--char-color);
+            &:hover{
+                background: var(--line-color);
+                .linkName, svg{
+                    transition: all 0.5s ease;
+                    color: var(--char-color);
+                }
+            }
+            .linkName{
+                color: var(--line-color);
+                font-size: 15px;
+                font-weight: 400;
+                white-space: nowrap;
+                opacity: 0;
+                pointer-events: none;
+                transition: 0.4s;
+            }
+        }
+        svg{
+            height: 30px;
+            line-height: 50px;
+            font-size: 18px;
+            border-radius: 12px;
+            &:hover{
+                background: var(--line-color);
+                color: var(--char-color);
+                + input{
+                    background: var(--line-color);
+                    color: var(--char-color);
+                }
+            }
+        }
+    }
+}
+.navbar.open{
+    width: 250px;
+    z-index: 3;
+    .logoDetails{
+        .icon, .logoName{
+            opacity: 1;
+        }
+        .btn{
+            opacity: 0;
+        }
+        .btnClose{
+            transition: all 0.8s ease;
+            opacity: 1;
+            text-align: right;
+        }
+    }
+    li .tooltip{
+        display: none;
+    }
+    input{
+        padding: 0 20px 0 50px;
+        width: 100%;
+        opacity: 1;
+        background: var(--bgg-hover-color);
+        color: var(--line-color);
+        pointer-events: auto;
+    }
+    li{
+        &:hover svg{
+            background: var(--bgg-hover-color);
+            color: var(--line-color);
+        }
+        a{
+            .linkName{
+                opacity: 1;
+                pointer-events: auto;
+            }
+            &:hover svg{
+                background: var(--line-color);
+                color: var(--char-color); 
+            }
+        }
+        svg{
+            &:hover{
+                background: var(--bgg-hover-color);
+                color: var(--line-color);
+                + input{
+                    background: var(--bgg-hover-color);
+                    color: var(--line-color);
+                }
+            }
+        }
+        input{
+            background: var(--bgg-hover-color);
+            color: var(--line-color);
+        }
+    }
+    .profile{
+        width: 250px;
+        .profileDetails{
+            opacity: 1;
+            height: 32px;
+        }
+        .logout{
+            width: 50px;
+            background: none;
+        }
+    }
+
+}

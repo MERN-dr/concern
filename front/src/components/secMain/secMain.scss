@@ -1,0 +1,30 @@
+.secMain{
+    background: var(--bgp-color);
+    position: relative;
+    min-height: 100vh;
+    top: 0;
+    left: 78px;
+    width: calc(100% - 78px);
+    transition: all 0.5s ease;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .loader{
+        width: 80%;
+        height: 50%;
+        z-index: 1000;
+        position: absolute;
+        border-radius: 70px;
+        margin-bottom: 10rem;
+    }
+    .container{
+        bottom: 28%;
+        position: absolute;
+        border-radius: 70px;
+        span{
+            color: var(--line-color);
+            font-weight: 700;
+        }
+    }
+}

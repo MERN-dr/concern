@@ -1,0 +1,127 @@
+@import "../../app.scss";
+
+.login{
+    position: absolute;
+    .ball{
+        position: fixed;
+        left: 50vw; top: 30vh;
+    }
+    .unvisible{
+        visibility: hidden;
+        opacity: 0;
+        // display: none;
+    }
+    .foot{
+        position: fixed;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .pngwing{
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+    .imgbigger{
+        width: 500px;
+        height: 500px;
+        transition: all 0.5s ease-in;
+        cursor: none;
+    }
+    .bounce { 
+        position: relative; 
+        /* 파폭 */ 
+        -moz-animation: bounce 1.5s infinite linear; 
+        /* 크롬 */ 
+        -webkit-animation: bounce 1.5s infinite linear; 
+        -o-animation: bounce 1.5s infinite linear; 
+        animation: bounce 1.5s infinite linear;
+    }
+
+    .visible{
+        visibility: visible;
+        // display: block;
+        opacity: 1;
+        transition: all 2.4s ease-in;
+        .input{
+            // background-color: var(--line-color);
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 50px;
+            width: 400px;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+            // animation: shake 1s ease;
+            // transition: all 1.5s ease;
+            input{
+                background: none;
+                border: none;
+                flex: 1;
+                height: 100%;
+                outline: none;
+                font-size: 16px;
+                text-align: center;
+            }
+            .icon{
+                margin: 0 14px 0 20px;
+            }
+            .button{
+                cursor: pointer;
+                margin: 0 20px 0 14px;
+            }
+            .errCourse{
+                position: absolute;
+                bottom: 70px;
+                left: 20px;
+                color: var(--err-g-font-color);
+                display: flex;
+                .errEmail{
+                }
+                .backLogin{
+                    margin-right: 10px;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+            .personAdd{
+                animation: blink-effect 1.5s step-end infinite;
+                cursor: pointer;
+                margin: 0 20px 0 14px;
+            }
+        } 
+        .clickEvent{
+            animation: shake 0.5s ease;
+            background: var(--bgg-color);
+        }
+        .inval{
+            display: none;
+        }
+    }
+    
+    
+}
+
+
+@include mobile {
+    .imgbigger {
+        width: 350px;
+        height: 200px;
+    }
+}
+@include tablet {
+    .imgbigger {
+        width: 500px;
+        height: 300px;
+    }
+}
+
+
+

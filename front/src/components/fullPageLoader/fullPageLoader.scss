@@ -1,0 +1,15 @@
+.fp_container{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    // background: #f8f8f8ad;
+    background: var(--bgp-color);
+    .fp_loader{
+        top: 30%;
+        left: 30%;
+        z-index: 1000;
+        position: absolute;
+    }
+}

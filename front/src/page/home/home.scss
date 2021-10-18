@@ -1,0 +1,7 @@
+.home{
+
+}
+.navbar.open ~ .secMain{
+    left: 250px;
+    width: calc(100% - 250px);
+}

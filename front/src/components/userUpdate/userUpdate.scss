@@ -1,0 +1,71 @@
+.userUpdate{
+    border-radius: 10px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+    height: 600px;
+    width: 500px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .updateContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        padding: 20px;
+        color: var(--line-color);
+        button{
+            background: var(--bgg-color);
+            height: 50px;
+            border-radius: 30px;
+            cursor: pointer;
+            border: none;
+            color: var(--line-color);
+            outline: none;
+        }
+        .updateTitle{
+            text-align: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .formIcon{
+                margin-bottom: 10px;
+                svg{
+                    color: var(--bgg-hover-color);
+                }
+            }
+            .formItem{
+                display: flex;
+                flex-direction: column;
+                input{
+                    background: var(--line-color);
+                    border: none;
+                    flex: 1;
+                    padding: 10px;
+                    padding-left: 20px;
+                    outline: none;
+                    font-size: 16px;
+                    text-align: left;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    &::placeholder{
+                        color: var(--bgg-color);
+                        font-size: 18px;
+                        opacity: 0.5;
+                    }
+                }
+                .file{
+                    display: none;
+                }
+                .fileName{
+                    cursor: cell;
+                }
+            }
+            button{
+                margin-top: 30px;
+            }
+        }
+    }
+}

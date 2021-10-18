@@ -1,0 +1,78 @@
+//color
+:root{
+  --char-color : #0b0b0b;
+  --bgp-color : #EB6C63;
+  --bgg-color : #75BD95;
+  --bgg-hover-color: #5fb585;
+  --line-color : #faf2de;
+  --ball-color : #e8e000;
+  --err-p-font-color : #f100f5;
+  --err-g-font-color : #0d8743;
+}
+// Breakpoints
+$breakpoint-mobile: 335px;
+$breakpoint-tablet: 500px;
+$breakpoint-desktop: 1024px;
+
+@mixin mobile {
+  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+
+/* 바운스의 높이 0% 일 때, 0px 50%일 때, -5px 70%일 때, -50px 100%일 때, 0px */ 
+@-webkit-keyframes bounce {
+  0% { top: 0; } 
+  50% { top: -5px; }
+  70% { top: -50px; } 
+  100% { top: 0; } 
+} 
+@-moz-keyframes bounce { 
+  0% { top: 0; } 
+  50% { top: -5px; } 
+  70% { top: -50px; } 
+  100% { top: 0; } 
+} 
+@-o-keyframes bounce {
+  0% { top: 0; } 
+  50% { top: -5px; } 
+  70% { top: -50px; } 
+  100% { top: 0; }
+} 
+@-ms-keyframes bounce { 
+  0% { top: 0; } 
+  50% { top: -5px; } 
+  70% { top: -50px; } 
+  100% { top: 0; } 
+} 
+@keyframes bounce { 
+  0% { top: 0; } 
+  50% { top: -5px; } 
+  70% { top: 50px; } 
+  100% { top: 0; } 
+}
+
+@keyframes shake{
+  0%{
+      transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50%{
+      transform: translate(-50%, -50%) rotate(10deg);
+  }
+  100%{
+      transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+@keyframes blink-effect { 50% { opacity: 0; } }
